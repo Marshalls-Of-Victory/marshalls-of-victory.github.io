@@ -4,10 +4,6 @@
   src: url('../assets/font-graffiti.otf');
 }
 
-*{
-  /* font-family: 'MOV-graffiti'; */
-}
-
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -71,8 +67,8 @@
   --bs-border-radius-xl: 1rem;
   --bs-border-radius-2xl: 2rem;
   --bs-border-radius-pill: 50rem;
-  --bs-link-color: #1abc9c;
-  --bs-link-hover-color: #15967d;
+  --bs-link-color: #c9c9c9;
+  --bs-link-hover-color: #999999;
   --bs-code-color: #d63384;
   --bs-highlight-bg: #fff3cd;
 }
@@ -3626,6 +3622,20 @@ textarea.form-control-lg {
   text-decoration: none;
   transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
+
+.nav-link-clr {
+  color: #fff !important;
+}
+
+.nav-link-clr:hover {
+  color: #b3b3b3 !important;
+}
+
+.nav-link-clr.active {
+  background-color: #ffffff !important;
+  color: #000 !important;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .nav-link {
     transition: none;
@@ -11009,7 +11019,7 @@ html {
   left: 0;
   transition: all 0.2s ease-in-out;
   opacity: 0;
-  background-color: rgba(26, 188, 156, 0.9);
+  background-color: rgba(83, 83, 83, 0.9);
 }
 .portfolio .portfolio-item .portfolio-item-caption:hover {
   opacity: 1;
