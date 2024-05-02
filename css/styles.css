@@ -11086,6 +11086,7 @@ top: 0px;
   padding: 10px;
   border-bottom: 3px solid;
   border-color: #424242;
+  cursor: pointer;
 }
 
 #languageSelector > span:hover > i {
