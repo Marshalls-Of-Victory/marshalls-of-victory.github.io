@@ -58,6 +58,7 @@ pageText = [
         "bio_2" : "Band members: <br> - Patryk Sławiński - Lead guitar <br> - Jan Krawczyk - Bass guitar and vocals <br> - Alex Nemertsalov - Rhythm guitar <br> - Antek Otwinowski - drums",
         "footer_location_label" : "Location",
         "footer_location" : "Krakow, Poland",
+        "close_window" : "Close window",
         //
         "Photo_1_title" : "Tearing the scene 🤘",
         "Photo_2_title" : "A walk in the park.. 👀",
@@ -77,6 +78,7 @@ pageText = [
         "bio_2" : "Skład zespołu: <br> - Patryk Sławiński - Gitara prowadząca <br> - Jan Krawczyk - Gitara basowa oraz wokal <br> - Alex Nemertsalov - Gitara rytmiczna oraz wokal wspierający <br> - Antek Otwinowski - perkusja",
         "footer_location_label" : "Lokalizacja",
         "footer_location" : "Kraków, Polska",
+        "close_window" : "Zamknij okno",
         //
         "Photo_1_title" : "Rozdzierając scenę 🤟",
         "Photo_2_title" : "Zwyczajny spacer.. 👀",
