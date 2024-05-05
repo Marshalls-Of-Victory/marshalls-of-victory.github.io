@@ -15,6 +15,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
         <link rel="stylesheet" href="assets/flag-icons-master/flag-icons.min.css">
     </head>
+
     <body id="page-top">
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
             <div class="container">
@@ -25,8 +26,9 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded nav-link-clr" href="#portfolio"><span class = "Section_1_Title"></span></a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded nav-link-clr" href="#about"><span class = "Section_2_Title"></span></a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded nav-link-clr" href="#portfolio"><span class = "Section_1_Title"></span></a></li>
+                        
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded nav-link-clr" href="#contact"><span class = "Section_3_Title"></span></a></li>
                     </ul>
 
@@ -36,11 +38,12 @@
                         </span>
                         <span id = "lang-1" onclick="langClicked(1)">
                             <i class="fi fi-pl"></i>
-                        </span>                                            
+                        </span>                                        
                     </div>
                 </div>
             </div>
         </nav>
+
         <!-- Masthead-->
         <header class="masthead bg-primary text-white text-center">
             <div class="container d-flex align-items-center flex-column">
@@ -67,42 +70,25 @@
             </div>
         </header>
 
-        <!-- Portfolio Section-->
-        <section class="page-section portfolio bg-white text-black" id="portfolio">
-            <div class="container" style = "text-align: center;">
-                <!-- Portfolio Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-black mb-0"><span class = "Section_1_Title"></span></h2>
+        <!-- About Section-->
+        <section class="page-section bg-white text-white mb-0" id="about">
+            <div class="container">
+                <!-- About Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-black"><span class = "Section_2_Title"></span></h2>
                 <!-- Icon Divider-->
                 <div class="divider-custom divider-dark">
                     <div class="divider-custom-line"></div>
                     <div class="divider-custom-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21z"/></svg></div>
                     <div class="divider-custom-line"></div>
                 </div>
-
-                <!-- INSTAGRAM EMBED HERE -->
-            </div>
-            </div>
-        </section>
-
-        <!-- About Section-->
-        <section class="page-section bg-black text-white mb-0" id="about">
-            <div class="container">
-                <!-- About Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-white"><span class = "Section_2_Title"></span></h2>
-                <!-- Icon Divider-->
-                <div class="divider-custom divider-light">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21z"/></svg></div>
-                    <div class="divider-custom-line"></div>
-                </div>
                 <!-- About Section Content-->
                 <div class="row">
-                    <div class="col-lg-4 ms-auto text-white"><p class="lead"><span class = "bio_1"></span></p></div>
-                    <div class="col-lg-4 me-auto text-white"><p class="lead"><span class = "bio_2"></span></p></div>
+                    <div class="col-lg-4 ms-auto text-black"><p class="lead"><span class = "bio_1"></span></p></div>
+                    <div class="col-lg-4 me-auto text-black"><p class="lead"><span class = "bio_2"></span></p></div>
                 </div>
                 <!-- About Section Button-->
                 <div class="text-center mt-4">
-                    <a class="btn btn-xl btn-outline-light" href="#contact">
+                    <a class="btn btn-xl btn-outline-dark" href="#contact">
                         <i class="fa-solid fa-address-book"></i>
                         <span class = "Section_3_Title"></span>
                     </a>
@@ -110,6 +96,84 @@
             </div>
         </section>
 
+        <!-- Portfolio Section-->
+        <section class="page-section portfolio bg-black text-white" id="portfolio">
+            <div class="container">
+                <!-- Portfolio Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-white mb-0"><span class = "Section_1_Title"></span></h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-light">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21z"/></svg></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Portfolio Grid Items-->
+                <div class="row justify-content-center">
+                    <!-- Portfolio Item 1-->
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fa-solid fa-circle-info"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio/tearing-the-scene.jpeg" alt="Tearing the scene - Marhsalls of Victory" />
+                        </div>
+                    </div>
+                    <!-- Portfolio Item 2-->
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal2">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fa-solid fa-circle-info"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio/walk-in-a-park.jpeg" alt="A walk in the park - Marshalls of Victory" />
+                        </div>
+                    </div>
+                    <!-- Portfolio Item 3-->
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal3">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white"><i class="fa-solid fa-circle-info"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio/elvis-presley-rock.jpeg" alt="Elvis Presley's rock in Krakow - Marshalls of Victory" />
+                        </div>
+                    </div>
+                    <!-- Portfolio Item 4 -->
+                    <!-- <div class="col-md-6 col-lg-4 mb-5 mb-lg-0"> -->
+                        <!-- <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal4"> -->
+                            <!-- <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100"> -->
+                                <!-- <div class="portfolio-item-caption-content text-center text-white"><i class="fa-solid fa-circle-info"></i></div> -->
+                            <!-- </div> -->
+                            <!-- <img class="img-fluid" src="assets/img/portfolio/game.png" alt="..." /> -->
+                        <!-- </div> -->
+                    <!-- </div> -->
+                    <!-- Portfolio Item 5-->
+                    <!-- <div class="col-md-6 col-lg-4 mb-5 mb-md-0"> -->
+                        <!-- <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal5"> -->
+                            <!-- <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100"> -->
+                                <!-- <div class="portfolio-item-caption-content text-center text-white"><i class="fa-solid fa-circle-info"></i></div> -->
+                            <!-- </div> -->
+                            <!-- <img class="img-fluid" src="assets/img/portfolio/safe.png" alt="..." /> -->
+                        <!-- </div> -->
+                    <!-- </div> -->
+                    <!-- Portfolio Item 6-->
+                    <!-- <div class="col-md-6 col-lg-4"> -->
+                        <!-- <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal6"> -->
+                            <!-- <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100"> -->
+                                <!-- <div class="portfolio-item-caption-content text-center text-white"><i class="fa-solid fa-circle-info"></i></div> -->
+                            <!-- </div> -->
+                            <!-- <img class="img-fluid" src="assets/img/portfolio/submarine.png" alt="..." /> -->
+                        <!-- </div> -->
+                    <!-- </div> -->
+
+                    <!-- View more button -->
+                    <div class="text-center mt-4">
+                        <a class="btn btn-xl btn-outline-light" href="https://www.instagram.com/marshallsofvictory">
+                            <i class="fab fa-fw fa-instagram"></i>
+                            <span class = "view_more"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- Contact Section-->
         <section class="page-section" id="contact">
@@ -203,17 +267,20 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                     <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Log Cabin</h2>
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0"><span class="Photo_1_title"></span></h2>
                                     <!-- Icon Divider-->
                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
                                         <div class="divider-custom-icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21z"/></svg></div>
                                         <div class="divider-custom-line"></div>
                                     </div>
-                                    <!-- Portfolio Modal - Image
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/cabin.png" alt="..." />
-                                    Portfolio Modal - Text-->
-                                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                    <!-- Portfolio Modal - Image-->
+                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/tearing-the-scene.jpeg" alt="Tearing the scene - Marshalls of Victory" />
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mb-4"><span class="Photo_desc"></span></p>
+                                    <a class="btn btn-outline-dark btn-social mx-1" href="https://www.instagram.com/marshallsofvictory"><i class="fab fa-fw fa-instagram"></i></a>
+                                    <a class="btn btn-outline-dark btn-social mx-1" href="https://www.facebook.com/profile.php?id=61558754971767"><i class="fab fa-fw fa-facebook-f"></i></a>
+                                    <a class="btn btn-outline-dark btn-social mx-1" href="https://twitter.com/movtheband"><i class="fab fa-fw fa fa-brands fa-twitter"></i></a><br><br>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
                                         Close Window
@@ -235,7 +302,7 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                     <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Tasty Cake</h2>
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0"><span class="Photo_2_title"></span></h2>
                                     <!-- Icon Divider-->
                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
@@ -243,9 +310,12 @@
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/cake.png" alt="..." />
+                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/walk-in-a-park.jpeg" alt="A walk in the park - Marshalls of Victory" />
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                    <p class="mb-4"><span class="Photo_desc"></span></p>
+                                    <a class="btn btn-outline-dark btn-social mx-1" href="https://www.instagram.com/marshallsofvictory"><i class="fab fa-fw fa-instagram"></i></a>
+                                    <a class="btn btn-outline-dark btn-social mx-1" href="https://www.facebook.com/profile.php?id=61558754971767"><i class="fab fa-fw fa-facebook-f"></i></a>
+                                    <a class="btn btn-outline-dark btn-social mx-1" href="https://twitter.com/movtheband"><i class="fab fa-fw fa fa-brands fa-twitter"></i></a><br><br>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
                                         Close Window
@@ -267,7 +337,7 @@
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                     <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Circus Tent</h2>
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0"><span class="Photo_3_title"></span></h2>
                                     <!-- Icon Divider-->
                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
@@ -275,9 +345,12 @@
                                         <div class="divider-custom-line"></div>
                                     </div>
                                     <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/circus.png" alt="..." />
+                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/elvis-presley-rock.jpeg" alt="Elvis Presley's rock in Krakow - Marshalls of Victory" />
                                     <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
+                                    <p class="mb-4"><span class="Photo_desc"></span></p>
+                                    <a class="btn btn-outline-dark btn-social mx-1" href="https://www.instagram.com/marshallsofvictory"><i class="fab fa-fw fa-instagram"></i></a>
+                                    <a class="btn btn-outline-dark btn-social mx-1" href="https://www.facebook.com/profile.php?id=61558754971767"><i class="fab fa-fw fa-facebook-f"></i></a>
+                                    <a class="btn btn-outline-dark btn-social mx-1" href="https://twitter.com/movtheband"><i class="fab fa-fw fa fa-brands fa-twitter"></i></a><br><br>
                                     <button class="btn btn-primary" data-bs-dismiss="modal">
                                         <i class="fas fa-xmark fa-fw"></i>
                                         Close Window
