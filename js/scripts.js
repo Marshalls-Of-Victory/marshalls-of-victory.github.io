@@ -121,9 +121,9 @@ function translate() {
         }
         elms = [...document.getElementsByTagName("input"), ...document.getElementsByTagName("textarea")];
         for (let i = 0; i < elms.length; i++) {
-            console.log(elms[i].getAttribute("placeholder"));
+            //console.log(elms[i].getAttribute("placeholder"));
             if (elms[i].getAttribute("placeholder") == k) {
-                console.log("found");
+                //console.log("found");
                 elms[i].setAttribute("placeholder", v);
             }
         }
