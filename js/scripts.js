@@ -60,9 +60,9 @@ pageText = [
         "footer_location" : "Krakow, Poland",
         "close_window" : "Close window",
         //
-        "Photo_1_title" : "Tearing the scene 🤘",
-        "Photo_2_title" : "A walk in the park.. 👀",
-        "Photo_3_title" : "Elvis Presley’s rock in Krakow 🇵🇱",
+        "Photo_1_title" : "",
+        "Photo_2_title" : "",
+        "Photo_3_title" : "",
         "Photo_desc" : "Follow for more content: "
     },
 
@@ -80,9 +80,9 @@ pageText = [
         "footer_location" : "Kraków, Polska",
         "close_window" : "Zamknij okno",
         //
-        "Photo_1_title" : "Rozdzierając scenę 🤟",
-        "Photo_2_title" : "Zwyczajny spacer.. 👀",
-        "Photo_3_title" : "Kamień Elvisa Presleya w Krakowie 🇵🇱",
+        "Photo_1_title" : "",
+        "Photo_2_title" : "",
+        "Photo_3_title" : "",
         "Photo_desc" : "Obserwuj po więcej: "
     }
 ]
