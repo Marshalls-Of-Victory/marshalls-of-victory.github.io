@@ -51,6 +51,8 @@ window.addEventListener('DOMContentLoaded', event => {
             //
             "latest_release_title" : "Test release",
             "latest_release_desc" : "Single · 2024",
+            "latest_release_button" : "Previous releases",
+            //
             "bio_1" : "We are Marshalls of Victory, a young band from Krakow, Poland that was formed at the beginning of March 2024. We play many genres of music, such as blues rock, hardrock, punk, punkrock, metal.",
             "bio_2" : "Band members: <br> - Patryk Sławiński - Lead guitar <br> - Jan Krawczyk - Bass guitar and vocals <br> - Alex Nemertsalov - Rhythm guitar <br> - Antek Otwinowski - drums",
             //
@@ -77,6 +79,8 @@ window.addEventListener('DOMContentLoaded', event => {
             //
             "latest_release_title" : "Test release",
             "latest_release_desc" : "Singiel · 2024",
+            "latest_release_button" : "Poprzednie wydania",
+            //
             "bio_1" : "Nazywamy się Marshalls of Victory, jesteśmy młodym zespołem z Krakowa, który powstał na początku marca 2024 roku. Gramy wiele gatunków muzyki, takich jak od blues rock, hardrock, punk, punkrock, metal.",
             "bio_2" : "Skład zespołu: <br> - Patryk Sławiński - Gitara prowadząca <br> - Jan Krawczyk - Gitara basowa oraz wokal <br> - Alex Nemertsalov - Gitara rytmiczna oraz wokal wspierający <br> - Antek Otwinowski - perkusja",
             //
