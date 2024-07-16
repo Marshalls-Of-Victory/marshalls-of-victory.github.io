@@ -11093,3 +11093,46 @@ top: 0px;
   filter: brightness(70%);
 
 }
+
+
+.box {
+
+}
+
+/* Create the hidden pseudo-element */
+/* include the shadow for the end state */
+
+.inner-shadow {
+  /*box-shadow: inset rgba(60, 70, 85, 0.5) 0px 0px 40px 0px, inset rgba(60, 70, 85, 0.5) 0px 0px 40px 0px, inset rgba(0, 0, 0, 1) 0px 0px 36px -24px;*/
+  border-radius: 5px;
+  box-shadow: 0 0 2px rgba(255,255,255,0);
+  margin: 20px 5px !important;
+  transition: all 0.3s ease-in-out;
+  background: linear-gradient(270deg, rgba(56,56,56,1) 0%, rgba(26,26,26,1) 40%, rgba(10,10,10,1) 75%);
+  
+  
+}
+
+.inner-shadow:hover {
+  content: '';
+  border-radius: 5px;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.15);
+  margin: 20px 5px !important;
+  transition: all 0.3s ease-in-out;
+}
+
+.pcimglogo {
+  scale: 200%;
+  left: 0;
+  top: 50%; 
+  transform: translateY(-25%);
+}
+
+@media screen and (min-width: 991px) and (max-width: 1199px) {
+  .pcimglogo {
+    scale: 200%;
+    left: 0;
+    top: 50%; 
+    transform: translate(-20%, -25%);
+  }
+}
