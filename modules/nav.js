@@ -21,7 +21,8 @@ document.write(`
                 <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded nav-link-clr" href="/index.html#portfolio"><span class = "Section_1_Title"></span></a></li>
                 <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded nav-link-clr" href="/index.html#contact"><span class = "Section_3_Title"></span></a></li>
                 <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded nav-link-clr" href="/links/index.html"><span class = "Section_4_Title"></span></a></li>
-                <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded nav-link-clr" href="/releases/index.html"><span class = "Section_5_Title"></span></a></li>
+
+                <li class="nav-item mx-0 mx-lg-1" style="display: none;"><a class="nav-link py-3 px-0 px-lg-3 rounded nav-link-clr" href="/releases/index.html"><span class = "Section_5_Title"></span></a></li>
             </ul>
 
             <div id = "languageSelector">
