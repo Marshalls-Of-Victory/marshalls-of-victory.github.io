@@ -102,7 +102,7 @@ function displayAllReleasesSection() {
                                     <h5 class="fw-bolder">` + rel.title + `</h5>
                                     <!-- Product reviews-->
                                     <div class="d-flex justify-content-center small mb-2">
-                                        ` + rel.date + " • " + rel.releaseType + `
+                                        ` + (rel.date.split('-')[2])+ " • " + rel.releaseType + `
                                     </div>
                                     <!-- Product price-->
                                 </div>
