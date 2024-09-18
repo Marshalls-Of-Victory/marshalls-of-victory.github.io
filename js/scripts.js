@@ -15,10 +15,11 @@ window.addEventListener('DOMContentLoaded', event => {
     };
 
     // Shrink the navbar 
-    navbarShrink();
+    //navbarShrink();
 
     // Shrink the navbar when page is scrolled
-    document.addEventListener('scroll', navbarShrink);
+
+    //document.addEventListener('scroll', navbarShrink);
 
     // Activate Bootstrap scrollspy on the main nav element
     const mainNav = document.body.querySelector('#mainNav');
@@ -51,6 +52,7 @@ pageText = [
         "Section_2_Title" : "Bio",
         "Section_3_Title" : "Contact us",
         "Section_4_Title" : "Links",
+        "Section_5_Title" : "Discography",
         "view_more" : "View more",
         "send_message" : "Send a message",
         "input_name" : "Name",
@@ -72,6 +74,7 @@ pageText = [
         "Section_2_Title" : "Bio",
         "Section_3_Title" : "Skontaktuj się z nami",
         "Section_4_Title" : "Linki",
+        "Section_5_Title" : "Dyskografia",
         "view_more" : "Zobacz więcej",
         "send_message" : "Wyślij",
         "input_name" : "Imię i nazwisko",
