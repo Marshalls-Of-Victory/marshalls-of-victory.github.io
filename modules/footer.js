@@ -1,5 +1,5 @@
 document.write(`
-        <footer class="footer text-center"></footer>
+        <footer class="footer text-center">
             <div class="container">
                 <div class="row" style = "text-align: center;">
                     <!-- Footer Location-->
@@ -22,8 +22,4 @@ document.write(`
                 </div>
             </div>
         </footer>
-        <!-- Copyright Section-->
-        <div class="copyright py-4 text-center text-white">
-            <div class="container"><small>Copyright &copy; Marshalls Of Victory 2024</small></div>
-        </div>    
 `)
