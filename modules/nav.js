@@ -3,7 +3,7 @@ document.write(`
 <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
     <div class="container">
         <!-- Navbar logo for large screens -->
-        <a class="navbar-brand d-flex justify-content-start d-none d-lg-flex" href="#page-top">
+        <a class="navbar-brand d-flex justify-content-start d-none d-lg-flex" href="/index.html#page-top">
             <img src="/assets/img/mov-text-logo-white.png" alt="Marshalls of Victory - White Text Logo" style="width: 15vw; height: auto;">
         </a>
         <!-- Navbar logo for small screens -->
