@@ -1,20 +1,22 @@
 
 Releases = [
-    {title: "Around You", date: "16-10-2024", releaseType: "Single", imagePath: "https://upload.wikimedia.org/wikipedia/en/b/b0/Lynyrdskynyrd.jpg", description: "The first single of a young rock and roll band from Kraków, Poland - Marshalls of Victory. ", spotifyLink: "#", youtubeLink: "#", credits: 
+    {title: "Around You", date: "16-10-2024", releaseType: `<span en = "Single" pl = "Singiel"></span>`, imagePath: "https://upload.wikimedia.org/wikipedia/en/b/b0/Lynyrdskynyrd.jpg", description: `
+        <span en = "The first single of a young rock and roll band from Kraków, Poland - Marshalls of Victory. " pl = "Pierwszy singiel rock and rollowego zespołu z Krakowa - Marshalls of Victory."></span>
+        `, spotifyLink: "#", youtubeLink: "#", credits: 
         {
-            "Guitars": "Patryk Sławiński, Alex Nemertsalov",
-            "Vocals": "Jan Krawczyk, Alex Nemertsalov",
-            "Bass guitar": "Jan Krawczyk",
-            "Drums": "Antoni Otwinowski",
+            "<span en = 'Guitars' pl = 'Gitary'></span>": "Patryk Sławiński, Alex Nemertsalov",
+            "<span en = 'Vocals' pl = 'Wokale'></span>": "Jan Krawczyk, Alex Nemertsalov",
+            "<span en = 'Bass guitar' pl = 'Gitara basowa'></span>": "Jan Krawczyk",
+            "<span en = 'Drums' pl = 'Perkusja'></span>": "Antoni Otwinowski",
             "": "",
-            "Composer": "Patryk Sławiński",
-            "Lyrics": "Jan Krawczyk",
-            "Produced by": "Sebastian Ciotti",
-            "Co-producers": "Patryk Sławiński",
+            "<span en = 'Composer' pl = 'Kompozytor'></span>": "Patryk Sławiński",
+            "<span en = 'Lyrics' pl = 'Tekst'></span>": "Jan Krawczyk",
+            "<span en = 'Produced by' pl = 'Wyprodukowane przez'></span>": "Sebastian Ciotti",
+            "<span en = 'Co-producer' pl = 'Współproducent'></span>": "Patryk Sławiński",
         }
     },
 
-    {title: "Made In Vietnam", date: "30-10-2024", releaseType: "Single",  imagePath: "assets/images/madeinvietnam.jfif", description: "The second single of a young rock and roll band from Kraków, Poland - Marshalls of Victory.", spotifyLink: "#", youtubeLink: "#", credits:
+    {title: "Made In Vietnam", date: "30-10-2024", releaseType: `<span en = "Single" pl = "Singiel"></span>`,  imagePath: "assets/images/madeinvietnam.jfif", description: "The second single of a young rock and roll band from Kraków, Poland - Marshalls of Victory.", spotifyLink: "#", youtubeLink: "#", credits:
     {
         "Guitars": "Patryk Sławiński, Alex Nemertsalov",
         "Vocals": "Jan Krawczyk, Alex Nemertsalov",
@@ -109,7 +111,7 @@ function displayAllReleasesSection() {
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="`+link+`">Show more</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="`+link+`"><span en = 'Show more' pl = 'Pokaż więcej'></span></a></div>
                             </div>
                         </div>
                     </div>
