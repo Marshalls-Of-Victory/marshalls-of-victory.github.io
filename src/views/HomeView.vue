@@ -1,9 +1,16 @@
 <script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+import Nav from '../components/Nav.vue'
+import Footer from '../components/Footer.vue'
+import HomeContent from '../components/home_page_components/Main.vue'
 </script>
 
 <template>
-  <main>
-    <TheWelcome />
-  </main>
+  <body id = "page-top">
+    
+ 
+  <Nav />
+  <HomeContent />
+  <Footer />
+
+  </body>
 </template>

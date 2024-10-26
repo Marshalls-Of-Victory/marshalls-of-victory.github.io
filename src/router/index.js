@@ -1,5 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import { reactive } from 'vue';
+// import {translate_1} from '/js/translator_v1.0.js'
+// import {translate_2} from '/js/translator_v2.0.js'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -10,14 +13,39 @@ const router = createRouter({
       component: HomeView
     },
     {
-      path: '/about',
-      name: 'about',
+      path: '/links',
+      name: 'links',
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
-      component: () => import('../views/AboutView.vue')
+      component: () => import('../views/LinksView.vue')
     }
   ]
 })
+
+router.afterEach((to, from) => {
+  console.log('Navigated to:', to.path);
+  function handleHash() {
+    let hash = window.location.hash;
+
+    // Check if the hash is not empty
+    if (hash) {
+      // Remove the '#' character to get just the ID
+      const id = hash.substring(1);
+      let elm = document.getElementById(id);
+      if (elm) {
+        elm.scrollIntoView();
+      }
+      
+    }
+
+    
+}
+  handleHash();
+  
+  
+
+  // router.app.config.globalProperties.$emitGlobalEvent({ from: from.path, to: to.path });
+});
 
 export default router
