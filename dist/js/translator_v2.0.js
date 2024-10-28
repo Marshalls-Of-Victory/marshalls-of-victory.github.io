@@ -5,7 +5,7 @@ let allowedAttributes = [
     "pl", // - lang = 1
 ]
 
-function translate() {
+export function translate_2() {
     let lang = Number(localStorage.getItem("lang"))
 
     let elms = document.getElementsByTagName("span");
@@ -25,5 +25,4 @@ function translate() {
     }
 }
 
-translate()
-
+translate_2()

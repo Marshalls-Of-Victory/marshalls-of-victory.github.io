@@ -18,11 +18,11 @@ console.log("lang: " + store.lang);
       <div class="container">
           <!-- Navbar logo for large screens -->
           <a class="navbar-brand d-flex justify-content-start d-none d-lg-flex" href="/index.html#page-top">
-              <img src="@/assets/img/mov-text-logo-white.png" alt="Marshalls of Victory - White Text Logo" style="width: 15vw; height: auto;">
+              <img src="/assets/img/mov-text-logo-white.png" alt="Marshalls of Victory - White Text Logo" style="width: 15vw; height: auto;">
           </a>
           <!-- Navbar logo for small screens -->
           <a class="navbar-brand d-flex justify-content-start d-block d-lg-none" href="#page-top">
-              <img src="@/assets/img/mov-text-logo-white-short.png" alt="Marshalls of Victory - White Text Logo" style="width: 15vw; height: auto;">
+              <img src="/assets/img/mov-text-logo-white-short.png" alt="Marshalls of Victory - White Text Logo" style="width: 15vw; height: auto;">
           </a>
 
           <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">

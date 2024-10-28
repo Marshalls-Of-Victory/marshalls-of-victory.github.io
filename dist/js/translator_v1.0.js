@@ -72,7 +72,7 @@ function langClicked(lang) {
     location.reload();
 }
 
-function translate() {
+function translate_1() {
     let langPack = pageText[localStorage.getItem("lang")];
     for (const [k, v] of Object.entries(langPack)) {
         let elms = document.getElementsByClassName(k);
@@ -91,5 +91,5 @@ function translate() {
     }
 }
 
-translate()
+translate_1()
 
