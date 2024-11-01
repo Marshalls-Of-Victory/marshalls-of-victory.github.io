@@ -4,7 +4,8 @@ export const getStore = defineStore('store', {
   state: () => {
     return {
       lang: localStorage.getItem("lang") == null ? 0 : localStorage.getItem("lang"),
-      releasesHTML: ""
+      releasesHTML: "",
+      data: {}
     }
   },
   // could also be defined as

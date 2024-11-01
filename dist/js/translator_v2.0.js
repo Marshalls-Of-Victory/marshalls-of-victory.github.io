@@ -19,7 +19,7 @@ export function translate_2() {
                     elm.setAttribute("placeholder", attribute)
                 }
             }
-
+            
         }
 
     }

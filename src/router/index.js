@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'
 import { reactive } from 'vue';
 // import {translate_1} from '/js/translator_v1.0.js'
 // import {translate_2} from '/js/translator_v2.0.js'
+import EventHandler from '@/assets/EventHandler';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -33,6 +34,7 @@ const router = createRouter({
 
 router.afterEach((to, from) => {
   console.log('Navigated to:', to.path);
+  EventHandler.emit('routeChanged', { from: from.path, to: to.path });
   function handleHash() {
     let hash = window.location.hash;
 
@@ -45,15 +47,20 @@ router.afterEach((to, from) => {
         elm.scrollIntoView();
       }
       
+    } else {
+      window.scrollTo(0, 0);
     }
 
     
 }
-  handleHash();
+  setTimeout(() => {
+    handleHash();
+  }, 30);
   
   
 
   // router.app.config.globalProperties.$emitGlobalEvent({ from: from.path, to: to.path });
 });
+
 
 export default router

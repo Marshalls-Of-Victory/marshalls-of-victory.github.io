@@ -119,7 +119,7 @@ function displayAllReleasesSection() {
                 </div>
                 <!-- Product actions-->
                 <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                    <div class="text-center"><RouterLink class="btn btn-outline-dark mt-auto" to="/"><span en = 'Show more' pl = 'Pokaż więcej'></span></RouterLink></div>
+                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="/`+link+`"><span en = 'Show more' pl = 'Pokaż więcej'></span></a></div>
                 </div>
             </div>
         </div>
