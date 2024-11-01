@@ -1,4 +1,5 @@
 import { getStore } from '@/assets/store.js'
+
 const store = getStore()
 
 
@@ -23,7 +24,7 @@ Releases = [
         }
     },
 
-    {title: "Made In Vietnam", date: "30-10-2024", releaseType: `<span en = "Single" pl = "Singiel"></span>`,  imagePath: "@/assets/images/madeinvietnam.jfif", description: "The second single of a young rock and roll band from Kraków, Poland - Marshalls of Victory.", spotifyLink: "#", youtubeLink: "#", credits:
+    {title: "Made In Vietnam", date: "30-10-2024", releaseType: `<span en = "Single" pl = "Singiel"></span>`,  imagePath: "/assets/images/madeinvietnam.jfif", description: "The second single of a young rock and roll band from Kraków, Poland - Marshalls of Victory.", spotifyLink: "#", youtubeLink: "#", credits:
     {
         "Guitars": "Patryk Sławiński, Alex Nemertsalov",
         "Vocals": "Jan Krawczyk, Alex Nemertsalov",
@@ -118,7 +119,7 @@ function displayAllReleasesSection() {
                 </div>
                 <!-- Product actions-->
                 <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="`+link+`"><span en = 'Show more' pl = 'Pokaż więcej'></span></a></div>
+                    <div class="text-center"><RouterLink class="btn btn-outline-dark mt-auto" to="/"><span en = 'Show more' pl = 'Pokaż więcej'></span></RouterLink></div>
                 </div>
             </div>
         </div>
