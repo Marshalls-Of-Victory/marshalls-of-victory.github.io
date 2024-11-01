@@ -87,7 +87,7 @@ export default {
   methods: {
     async getReleases() {
       try {
-        const response = await axios.post('assets/php/releases/getReleases.php', {
+        const response = await axios.post('/assets/php/releases/getReleases.php', {
           message: this.message
         });
 
