@@ -1,8 +1,15 @@
+<script setup>
+
+    import EventHandler from '@/assets/EventHandler';
+
+</script>
+
 <template>
 
 </template>
 
-<script defer>
+<script>
+
 
 if (pageText == null) {
     var pageText = [];
@@ -128,9 +135,16 @@ function translate2() {
 
 export default {
     mounted() {
-        //refreshFlags();
-        
         console.log("Translator: starting...")
+        EventHandler.on('refreshTranslator', () => {
+            this.$nextTick(() => {
+                translate();
+                translate2();
+            });
+        });
+    },
+    unmounted() {
+        EventHandler.off('refreshTranslator'); // Clean up the listener
     },
     watch: {
         // Watch for changes to the $route object

@@ -1,13 +1,72 @@
 <?php
-header('Content-Type: application/json');
+// header('Content-Type => application/json');
 header('Access-Control-Allow-Origin: *');
-header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE');
+header("Access-Control-Allow-Headers: Content-Type");
+header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS');
 
 // Example data for demonstration
-$data = [
-    "message" => "Hello from PHP!",
-    "success" => true
+
+$releases = [
+    ["releaseID" => "around-you", "title" => "Around You", "date" => "22-11-2024", "releaseType" => '<span en = "Single" pl = "Singiel"></span>', "imagePath" => "/assets/images/aroundyou.jfif", "description" => '
+        <span en = "The first single of a young rock and roll band from Kraków, Poland - Marshalls of Victory. " pl = "Pierwszy singiel rock and rollowego zespołu z Krakowa - Marshalls of Victory."></span>
+        ', "spotifyLink" => "#", "youtubeLink" => "#", "credits" => 
+        [
+            "<span en = 'Guitars' pl = 'Gitary'></span>" => "Patryk Sławiński, Alex Nemertsalov",
+            "<span en = 'Vocals' pl = 'Wokale'></span>" => "Jan Krawczyk, Alex Nemertsalov",
+            "<span en = 'Bass guitar' pl = 'Gitara basowa'></span>" => "Jan Krawczyk",
+            "<span en = 'Drums' pl = 'Perkusja'></span>" => "Antoni Otwinowski",
+            "" => "",
+            "<span en = 'Composer' pl = 'Kompozytor'></span>" => "Patryk Sławiński",
+            "<span en = 'Lyrics' pl = 'Tekst'></span>" => "Jan Krawczyk",
+            "<span en = 'Produced by' pl = 'Wyprodukowane przez'></span>" => "Sebastian Ciotti",
+            "<span en = 'Co-producer' pl = 'Współproducent'></span>" => "Patryk Sławiński",
+        ],
+        "visible" => true,
+        "after-releasedate-only" => false
+    ],
+
+    ["releaseID" => "made-in-vietnam", "title" => "Made In Vietnam", "date" => "03-11-2024", "releaseType" => '<span en = "Single" pl = "Singiel"></span>',  "imagePath" => "/assets/images/madeinvietnam.jfif", "description" => "The second single of a young rock and roll band from Kraków, Poland - Marshalls of Victory.", "spotifyLink" => "#", "youtubeLink" => "#", "credits" =>
+        [
+            "Guitars" => "Patryk Sławiński, Alex Nemertsalov",
+            "Vocals" => "Jan Krawczyk, Alex Nemertsalov",
+            "Bass guitar" => "Jan Krawczyk",
+            "Drums" => "Antoni Otwinowski",
+            "" => "",
+            "Composer" => "Patryk Sławiński",
+            "Lyrics" => "Jan Krawczyk, Alex Nemertsalov",
+            "Produced by" => "Sebastian Ciotti",
+            "Co-producers" => "Patryk Sławiński",
+        ],
+        "visible" => false,
+        "after-releasedate-only" => true
+    ]
+
+    
 ];
+
+
+$releases_send_to_client = [];
+
+$now = new DateTime();
+
+for ($i = 0; $i < sizeof($releases); $i++) {
+    if ($releases[$i]["visible"]) {
+        $date = DateTime::createFromFormat("d-m-Y", $releases[$i]["date"]);
+        if (!$releases[$i]["after-releasedate-only"] || $date <= $now) { //should it be displayed at all ?
+
+            $releases_send_to_client[$i] = $releases[$i];
+
+            $releases_send_to_client[$i]["upcoming"] = ($date >= $now); //is it an upcoming release ?
+            
+            
+        }
+
+        
+    }
+    
+}
+
+$data = $releases_send_to_client;
 
 // Return JSON response
 echo json_encode($data);

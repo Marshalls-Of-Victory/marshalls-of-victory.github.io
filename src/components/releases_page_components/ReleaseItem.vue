@@ -10,6 +10,10 @@
         <div class="col mb-5">
             <div class="card h-100">
                 <!-- Product image-->
+                <span v-if = "upcoming">
+                  <span class="badge m-1 bg-danger" style = "position: absolute;" pl = "Premiera wkrótce" en = "Upcoming release"></span>
+                </span>
+                
                 <img class="card-img-top" :src="imageSrc" alt="..." />
                 <!-- Product details-->
                 <div class="card-body p-4">
@@ -77,6 +81,10 @@ export default {
     releaseDate: {
         type: String,
         default: "22-11-2024"
+    },
+    upcoming: {
+      type: Boolean,
+      default: false
     }
   }
 

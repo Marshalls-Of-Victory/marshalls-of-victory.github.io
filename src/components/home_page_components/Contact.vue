@@ -1,3 +1,7 @@
+<script setup>
+  import PHPForm from '../utils/PHPForm.vue';
+</script>
+
 <template>
         <section class="page-section" id="contact">
             <div class="container">
@@ -14,17 +18,17 @@
                     <div class="col-lg-8 col-xl-7">
                        <div class="container">
                         <div class="row">
-                            <form role="form" id="contact-form" class="contact-form" action="https://formsubmit.co/492aae70d4f03bd0ceb337ab31f5fde0" method="POST">
+                            <PHPForm role="form" id="contact-form" class="contact-form" action="/assets/php/home/contact.php" @formResponse="response" :model = "form">
                             <div class="row">
                                     <div class="col-md-6">
                                       <div class="form-group">
-                                        <input type="text" class="form-control" name="Name" autocomplete="off" id="Name" placeholder="input_name" required>
+                                        <input type="text" class="form-control" name="Name" autocomplete="off" id="Name" placeholder="input_name" required v-model = "form.name">
                                       </div>
                                   </div>
                                   <span class = "d-sm-none"><br></span>
                                     <div class="col-md-6">
                                       <div class="form-group">
-                                        <input type="email" class="form-control" name="email" autocomplete="off" id="email" placeholder="E-mail" required>
+                                        <input type="email" class="form-control" name="email" autocomplete="off" id="email" placeholder="E-mail" required v-model = "form.mail">
                                       </div>
                                   </div>
                                   <br>
@@ -34,7 +38,7 @@
                                   <div class="row">
                                       <div class="col-md-12">
                                       <div class="form-group">
-                                        <textarea class="form-control textarea" rows="3" name="Message" id="Message" placeholder="input_message" maxlength = "2500" required></textarea>
+                                        <textarea class="form-control textarea" rows="3" name="Message" id="Message" placeholder="input_message" maxlength = "2500" required v-model = "form.message"></textarea>
                                       </div>
                                   </div>
                                 </div>
@@ -44,7 +48,7 @@
                               <button type="submit" class="btn main-btn pull-right"><span class = "send_message"></span></button>
                               </div>
                               </div>
-                            </form>
+                            </PHPForm>
                         </div>
                     </div>
                     </div>
@@ -52,3 +56,27 @@
             </div>
         </section>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      form: {}
+    }
+  },
+  methods: {
+    response(e) {
+      console.log("onResponse - " + JSON.stringify(e.data))
+      if (e.success) {
+        console.log("Sukces")
+        if (e.data.sent) {
+          console.log("Wiadomosc wyslana");
+        }
+      } else {
+        console.log("Błąd: " + e.error)
+      }
+    }
+  }
+}
+
+</script>

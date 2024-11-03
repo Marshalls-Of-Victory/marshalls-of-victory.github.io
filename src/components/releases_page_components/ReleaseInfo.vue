@@ -46,6 +46,7 @@ import EventHandler from '@/assets/EventHandler';
             <br>
                 
         </span>
+        {{ EventHandler.emit("refreshTranslator") }}
 
     </div>
     </section>
@@ -71,9 +72,11 @@ export default {
         if (id != null && store.data.releases.find(x => x.releaseID == id) != undefined) {
             this.display = true;
             this.release = store.data.releases.find(x => x.releaseID == id)
+            console.warn("DISPLAYING RELEASE INFO")
             
         } else {
             this.display = false;
+            console.warn("WRONG ID PROVIDED")
         }
         
     }
@@ -85,8 +88,16 @@ export default {
   },
 
   mounted() {
-    this.checkValidation()
-
+    EventHandler.on('response', (e) => {
+        // EventHandler.off("response");
+        if (e.success) {
+            if (e.data[0].visible) {
+                this.checkValidation()
+            }
+        }
+    })
+    
+    
     EventHandler.on('routeChanged', () => {
         console.log("RECIEVED SIGNAL");
         this.checkValidation();
@@ -94,6 +105,7 @@ export default {
   },
   unmounted() {
     EventHandler.off('routeChanged'); // Clean up the listener
+    EventHandler.off("response");
   },
 
 }

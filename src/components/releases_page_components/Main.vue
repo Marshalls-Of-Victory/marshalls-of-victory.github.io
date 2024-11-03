@@ -1,12 +1,15 @@
 <script setup>
 // import "@/assets/releases_scripts.js"
 import { getStore } from '@/assets/store.js'
-import axios from 'axios';
+
 
 import ReleaseItem from './ReleaseItem.vue'
 import ReleaseInfo from './ReleaseInfo.vue'
 import Nav from '../Nav.vue'
 import Footer from '../Footer.vue'
+import PHPDataDownloader from '../utils/PHPDataDownloader.vue'
+import EventHandler from '@/assets/EventHandler'
+
 
 var store = getStore()
 
@@ -53,7 +56,9 @@ if (store.data.releases == undefined) store.$patch({ data: { releases: [] } });
             <h2 class="fw-bolder mb-4"><br><span en = 'All Releases' pl = 'Wszystkie wydania'></span></h2>
             <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-left" id = "allReleases" v-if = "pageLoaded">
                 <span v-for = "release in store.data.releases">
+                    {{  console.log("[DEB] Creating release: " + release.releaseID + ", type: " + release.releaseType)  }}
                     <ReleaseItem
+                        :upcoming = release.upcoming
                         :releaseID="release.releaseID"
                         :title="release.title"
                         :imageSrc="release.imagePath"
@@ -70,6 +75,7 @@ if (store.data.releases == undefined) store.$patch({ data: { releases: [] } });
     <!-- Core theme JS-->
     
     <Footer />
+    <PHPDataDownloader action = "/assets/php/releases/getReleases.php" @response = "onResponse"/>
 </template>
 <script>
 export default {
@@ -85,59 +91,73 @@ export default {
   },
 
   methods: {
-    async getReleases() {
-      try {
-        const response = await axios.post('/assets/php/releases/getReleases.php', {
-          message: this.message
-        });
 
-        console.log(response.data);
-        console.log(this.message)
-      } catch (error) {
-        console.error(error);
-      }
+    onResponse(e) {
+        console.log("onResponse - RECIEVED EVENT")
+        console.log("Success: " + e.success)
+        console.log("Data: " + JSON.stringify(e.data))
+
+        var store = getStore();
+        store.data.releases = e.data;
+        this.pageLoaded = true;
+        EventHandler.emit("refreshTranslator");
+
+    },
+
+    async getReleases() {
+        console.log("ENV:" + process.env.NODE_ENV);
+    //   try {
+    //     const response = await axios.post('/assets/php/releases/getReleases.php', {
+    //       message: this.message
+    //     });
+
+    //     console.log(response.data);
+    //     console.log(this.message)
+    //   } catch (error) {
+    //     console.error(error);
+    //   }
     }
   },
 
   created() {
-    var store = getStore()
+    // var store = getStore()
 
     this.getReleases();
     
 
-    store.data.releases = [
-        {releaseID : "around-you", title: "Around You", date: "16-10-2024", releaseType: `<span en = "Single" pl = "Singiel"></span>`, imagePath: "https://upload.wikimedia.org/wikipedia/en/b/b0/Lynyrdskynyrd.jpg", description: `
-            <span en = "The first single of a young rock and roll band from Kraków, Poland - Marshalls of Victory. " pl = "Pierwszy singiel rock and rollowego zespołu z Krakowa - Marshalls of Victory."></span>
-            `, spotifyLink: "#", youtubeLink: "#", credits: 
-            {
-                "<span en = 'Guitars' pl = 'Gitary'></span>": "Patryk Sławiński, Alex Nemertsalov",
-                "<span en = 'Vocals' pl = 'Wokale'></span>": "Jan Krawczyk, Alex Nemertsalov",
-                "<span en = 'Bass guitar' pl = 'Gitara basowa'></span>": "Jan Krawczyk",
-                "<span en = 'Drums' pl = 'Perkusja'></span>": "Antoni Otwinowski",
-                "": "",
-                "<span en = 'Composer' pl = 'Kompozytor'></span>": "Patryk Sławiński",
-                "<span en = 'Lyrics' pl = 'Tekst'></span>": "Jan Krawczyk",
-                "<span en = 'Produced by' pl = 'Wyprodukowane przez'></span>": "Sebastian Ciotti",
-                "<span en = 'Co-producer' pl = 'Współproducent'></span>": "Patryk Sławiński",
-            }
-        },
+    // store.data.releases = [
+    //     {releaseID : "around-you", title: "Around You", date: "16-10-2024", releaseType: `<span en = "Single" pl = "Singiel"></span>`, imagePath: "https://upload.wikimedia.org/wikipedia/en/b/b0/Lynyrdskynyrd.jpg", description: `
+    //         <span en = "The first single of a young rock and roll band from Kraków, Poland - Marshalls of Victory. " pl = "Pierwszy singiel rock and rollowego zespołu z Krakowa - Marshalls of Victory."></span>
+    //         `, spotifyLink: "#", youtubeLink: "#", credits: 
+    //         {
+    //             "<span en = 'Guitars' pl = 'Gitary'></span>": "Patryk Sławiński, Alex Nemertsalov",
+    //             "<span en = 'Vocals' pl = 'Wokale'></span>": "Jan Krawczyk, Alex Nemertsalov",
+    //             "<span en = 'Bass guitar' pl = 'Gitara basowa'></span>": "Jan Krawczyk",
+    //             "<span en = 'Drums' pl = 'Perkusja'></span>": "Antoni Otwinowski",
+    //             "": "",
+    //             "<span en = 'Composer' pl = 'Kompozytor'></span>": "Patryk Sławiński",
+    //             "<span en = 'Lyrics' pl = 'Tekst'></span>": "Jan Krawczyk",
+    //             "<span en = 'Produced by' pl = 'Wyprodukowane przez'></span>": "Sebastian Ciotti",
+    //             "<span en = 'Co-producer' pl = 'Współproducent'></span>": "Patryk Sławiński",
+    //         }
+    //     },
 
-        {releaseID : "made-in-vietnam", title: "Made In Vietnam", date: "30-10-2024", releaseType: `<span en = "Single" pl = "Singiel"></span>`,  imagePath: "/assets/images/madeinvietnam.jfif", description: "The second single of a young rock and roll band from Kraków, Poland - Marshalls of Victory.", spotifyLink: "#", youtubeLink: "#", credits:
-        {
-            "Guitars": "Patryk Sławiński, Alex Nemertsalov",
-            "Vocals": "Jan Krawczyk, Alex Nemertsalov",
-            "Bass guitar": "Jan Krawczyk",
-            "Drums": "Antoni Otwinowski",
-            "": "",
-            "Composer": "Patryk Sławiński",
-            "Lyrics": "Jan Krawczyk, Alex Nemertsalov",
-            "Produced by": "Sebastian Ciotti",
-            "Co-producers": "Patryk Sławiński",
-        }}
+    //     {releaseID : "made-in-vietnam", title: "Made In Vietnam", date: "30-10-2024", releaseType: `<span en = "Single" pl = "Singiel"></span>`,  imagePath: "/assets/images/madeinvietnam.jfif", description: "The second single of a young rock and roll band from Kraków, Poland - Marshalls of Victory.", spotifyLink: "#", youtubeLink: "#", credits:
+    //     {
+    //         "Guitars": "Patryk Sławiński, Alex Nemertsalov",
+    //         "Vocals": "Jan Krawczyk, Alex Nemertsalov",
+    //         "Bass guitar": "Jan Krawczyk",
+    //         "Drums": "Antoni Otwinowski",
+    //         "": "",
+    //         "Composer": "Patryk Sławiński",
+    //         "Lyrics": "Jan Krawczyk, Alex Nemertsalov",
+    //         "Produced by": "Sebastian Ciotti",
+    //         "Co-producers": "Patryk Sławiński",
+    //     }}
 
         
-    ]
-    this.pageLoaded = true;
+    // ]
+    
 
   }
 }
