@@ -1,5 +1,7 @@
 <script setup>
   import PHPForm from '../utils/PHPForm.vue';
+  import EventHandler from '@/assets/EventHandler';
+  import Translate from '../Translate.vue';
 </script>
 
 <template>
@@ -18,7 +20,14 @@
                     <div class="col-lg-8 col-xl-7">
                        <div class="container">
                         <div class="row">
-                            <PHPForm role="form" id="contact-form" class="contact-form" action="/assets/php/home/contact.php" @formResponse="response" :model = "form">
+                          <span v-if = "sentSuccess">
+                            <div class="alert alert-dismissible alert-secondary">
+                              <button type="button" class="btn-close" data-bs-dismiss="alert" @click.prevent="sentSuccess = false"></button>
+                              <strong><span en = "Sent!" pl = "Wysłano!"></span></strong> <span en = "We recieved your email. We'll contact you as soon as possible!" pl = "Otrzymaliśmy twój email. Odpowiemy na niego tak szybko, jak to możliwe!"></span>
+                            </div>
+                          </span>
+
+                            <PHPForm role="form" id="contact-form" class="contact-form" action="/assets/php/home/contact.php" @formResponse="response" :model = "form" @sent = "sent" >
                             <div class="row">
                                     <div class="col-md-6">
                                       <div class="form-group">
@@ -45,7 +54,10 @@
                                 <br>
                                 <div class="row">
                                 <div class="col-md-12">
-                              <button type="submit" class="btn main-btn pull-right"><span class = "send_message"></span></button>
+                              <button type="submit" class="btn main-btn pull-right">
+                                <span v-if = "sending"><Translate en = "Sending..." pl = "Wysyłanie..." /></span>
+                                <span v-else><Translate en = "Send" pl = "Wyślij" /></span>
+                              </button>
                               </div>
                               </div>
                             </PHPForm>
@@ -61,16 +73,25 @@
 export default {
   data() {
     return {
-      form: {}
+      form: {},
+      sentSuccess: false,
+      sending: false
     }
   },
   methods: {
+
+    sent() {
+      this.sending = true;
+    },
     response(e) {
+      this.sending = false
       console.log("onResponse - " + JSON.stringify(e.data))
       if (e.success) {
         console.log("Sukces")
         if (e.data.sent) {
+          this.sentSuccess = true
           console.log("Wiadomosc wyslana");
+          EventHandler.emit("refreshTranslator")
         }
       } else {
         console.log("Błąd: " + e.error)

@@ -21,6 +21,7 @@ export default {
   methods: {
     async makeRequest(file) {
       console.warn("SENDING: " + JSON.stringify(this.model))
+      this.$emit("sent");
       try {
         const response = await axios.post(file, this.model);
         this.$emit("formResponse", {success: true, data: response.data})
