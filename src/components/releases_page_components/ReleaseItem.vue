@@ -11,10 +11,10 @@
             <div class="card h-100">
                 <!-- Product image-->
                 <span v-if = "upcoming">
-                  <span class="badge m-1 bg-danger" style = "position: absolute;" pl = "Premiera wkrótce" en = "Upcoming release"></span>
+                  <span class="badge m-1 bg-danger" style = "position: absolute; z-index: 999;" pl = "Premiera wkrótce" en = "Upcoming release"></span>
                 </span>
                 
-                <img class="card-img-top" :src="imageSrc" alt="..." />
+                <img class="card-img-top" :src="imageSrc" alt="..." :style = "'filter: brightness('+ (upcoming ? 50 : 100) +'%);'"/>
                 <!-- Product details-->
                 <div class="card-body p-4">
                     <div class="text-center">
