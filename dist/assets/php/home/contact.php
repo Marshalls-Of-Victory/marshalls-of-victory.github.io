@@ -41,7 +41,7 @@ try {
     $mail->Host       = 'smtp.gmail.com';
     $mail->SMTPAuth   = true;
     $mail->Username   = 'movmailer@gmail.com';
-    $mail->Password   = '38314765.a';
+    $mail->Password   = 'ujxhmfncenuqokze';
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
     $mail->Port       = 587;
 
@@ -50,7 +50,7 @@ try {
 
     $mail->isHTML(true);
     $mail->Subject = 'A message from ' . $input["name"] . ' - MOV Website';
-    $mail->Body    = $message;
+    $mail->Body    = '<b>From: '. $input["mail"] . '</b><br>' . $message;
 
     $mail->send();
     //echo 'Message has been sent';

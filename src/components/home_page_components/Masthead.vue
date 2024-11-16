@@ -11,7 +11,7 @@
         <header class="masthead bg-primary text-white text-center">
             <div class="container d-flex align-items-center flex-column">
                 <!-- Masthead Avatar Image-->
-                <!-- <img class="masthead-avatar mb-5" src="../assets/img/mov-logo-white.png" alt="Marshalls Of Victory - White Logo" /> -->
+                <img class="masthead-avatar mb-5" src="/assets/img/mov-logo-white.png" alt="Marshalls Of Victory - White Logo" />
                 <!-- Masthead Heading-->
                 <img class="masthead-avatar mb-0" src="/assets/img/mov-text-logo-white.png" alt="Marshalls of Victory - White Text Logo" style="width: 50vw; height: auto;">
                 <!-- Icon Divider-->

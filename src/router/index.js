@@ -5,6 +5,9 @@ import { reactive } from 'vue';
 // import {translate_2} from '/js/translator_v2.0.js'
 import EventHandler from '@/assets/EventHandler';
 
+
+
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -28,7 +31,8 @@ const router = createRouter({
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import('../views/ReleasesView.vue')
-    }
+    },
+    { path: '/:pathMatch(.*)*', name: 'home', component: HomeView }
   ]
 })
 
