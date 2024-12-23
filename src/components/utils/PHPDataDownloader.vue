@@ -19,11 +19,16 @@ export default {
         const response = await axios.post(file, {
           // message: this.message
         });
+        
         this.$emit("response", {success: true, data: response.data})
         EventHandler.emit("response", {success: true, data: response.data})
+        console.log("Response - try")
+        return;
       } catch (error) {
+        
         this.$emit("response", {success: false, error: error})
         EventHandler.emit("response", {success: false, error: error})
+        console.log("Response - error")
       }
     }
   },

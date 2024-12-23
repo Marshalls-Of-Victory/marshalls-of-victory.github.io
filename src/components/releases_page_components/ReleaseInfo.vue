@@ -26,7 +26,14 @@ import EventHandler from '@/assets/EventHandler';
                     <div class="d-flex">
 
                         <a class="btn btn-outline-danger btn-social mx-1" href="https://www.youtube.com/@MarshallsOfVictory" id = "releaseYoutube"><i class="fab fa-fw fa fa-brands fa-youtube"></i></a>
-                        <a class="btn btn-outline-success btn-social mx-1" href="https://www.youtube.com/@MarshallsOfVictory" id = "releaseSpotify"><i class="fab fa-fw fa fa-brands fa-spotify"></i></a>
+                        <a class="btn btn-outline-success btn-social mx-1" href="https://open.spotify.com/artist/4jF1QqUjTztQ0x6iC7VSdh?si=6hroWnx5ToKputQYX9C99g" id = "releaseSpotify"><i class="fab fa-fw fa fa-brands fa-spotify"></i></a>
+
+                        <a class="btn btn-outline-pink btn-social mx-1" href="https://music.apple.com/pl/artist/marshalls-of-victory/1776336930?l=pl" id = "release"><i class="fab fa-fw fa fa-brands fa-apple"></i></a>
+
+                        <a class="btn btn-outline-darkinfo btn-social mx-1" href="https://music.amazon.com/artists/B0DLBM9Q83/marshalls-of-victory" id = "releaseAmazon"><i class="fa-brands fa-amazon"></i></a>
+                        <!-- <a class="btn btn-outline-darkinfo btn-social mx-1" href="#" id = "release"><i class="fab fa-fw fa fa-brands fa-itunes"></i></a> -->
+
+                        <!-- <a class="btn btn-outline-violet btn-social mx-1" href="#" id = "release"><i class="fab fa-fw fa fa-brands fa-deezer"></i></a> -->
                         
                     </div>
                 </div>
@@ -67,6 +74,7 @@ export default {
     checkValidation() {
         console.log("VALIDATION PROCESSSSSSSSSSSSSSSSSSSSS")
         let id = LinkGetManager.getParameter("releaseID")
+        console.warn("PROVIDED ID: " + id)
         let store = getStore()
         console.log(store.data.releases)
         if (id != null && store.data.releases.find(x => x.releaseID == id) != undefined) {
@@ -92,6 +100,7 @@ export default {
         // EventHandler.off("response");
         if (e.success) {
             if (e.data[0].visible) {
+                
                 this.checkValidation()
             }
         }

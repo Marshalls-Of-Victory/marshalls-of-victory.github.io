@@ -45,8 +45,10 @@ router.afterEach((to, from) => {
 
     // Check if the hash is not empty
     if (hash) {
+      let hashArr = window.location.toString().split('#');
       // Remove the '#' character to get just the ID
-      const id = hash.substring(1);
+      const id = hashArr[hashArr.length - 1]
+      console.warn(id)
       let elm = document.getElementById(id);
       if (elm) {
         elm.scrollIntoView();

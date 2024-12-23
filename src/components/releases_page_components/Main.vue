@@ -165,3 +165,9 @@ export default {
 
 
 </script>
+
+<style>
+#allReleases{
+    align-items: stretch;
+}
+</style>

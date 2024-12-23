@@ -7,8 +7,8 @@
 </script>
 
 <template>     
-        <div class="col mb-5">
-            <div class="card h-100">
+        <div class="col mb-5" style = "height: 100%;">
+            <div class="card" id = "productcard">
                 <!-- Product image-->
                 <span v-if = "upcoming">
                   <span class="badge m-1 bg-danger" style = "position: absolute; z-index: 999;" pl = "Premiera wkrótce" en = "Upcoming release"></span>
@@ -32,7 +32,7 @@
                 <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
                     <div class="text-center"><RouterLink
                         class="btn btn-outline-dark mt-auto"
-                        :to = "`/releases?releaseID=${releaseID}`"
+                        :to = "`/releases?releaseID=${releaseID}#productParent`"
                     
                     
                         ><span en = 'Show more' pl = 'Pokaż więcej'></span></RouterLink></div>
@@ -91,3 +91,11 @@ export default {
 }
 
 </script>
+
+<style>
+
+#productcard{
+  min-height: 100%;
+}
+
+</style>

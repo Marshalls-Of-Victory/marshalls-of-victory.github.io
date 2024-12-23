@@ -25,7 +25,11 @@ $releases = [
         "after-releasedate-only" => false
     ],
 
-    ["releaseID" => "made-in-vietnam", "title" => "Made In Vietnam", "date" => "03-11-2024", "releaseType" => '<span en = "Single" pl = "Singiel"></span>',  "imagePath" => "/assets/images/madeinvietnam.jfif", "description" => "The second single of a young rock and roll band from Kraków, Poland - Marshalls of Victory.", "spotifyLink" => "#", "youtubeLink" => "#", "credits" =>
+    ["releaseID" => "made-in-vietnam", "title" => "Made In Vietnam", "date" => "20-12-2024", "releaseType" => '<span en = "Single" pl = "Singiel"></span>',  "imagePath" => "/assets/images/madeinvietnam.jfif", "description" => '
+    
+        <span en = "The second single of a young rock and roll band from Kraków, Poland - Marshalls of Victory. " pl = "Drugi singiel rock and rollowego zespołu z Krakowa - Marshalls of Victory."></span>
+    
+        ', "spotifyLink" => "#", "youtubeLink" => "#", "credits" =>
         [
             "Guitars" => "Patryk Sławiński, Alex Nemertsalov",
             "Vocals" => "Jan Krawczyk, Alex Nemertsalov",
@@ -37,8 +41,8 @@ $releases = [
             "Produced by" => "Sebastian Ciotti",
             "Co-producers" => "Patryk Sławiński",
         ],
-        "visible" => false,
-        "after-releasedate-only" => true
+        "visible" => true,
+        "after-releasedate-only" => false
     ]
 
     
