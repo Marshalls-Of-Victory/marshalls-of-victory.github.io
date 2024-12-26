@@ -7,7 +7,7 @@ header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS');
 // Example data for demonstration
 
 $releases = [
-    ["releaseID" => "around-you", "title" => "Around You", "date" => "22-11-2024", "releaseType" => '<span en = "Single" pl = "Singiel"></span>', "imagePath" => "/assets/images/aroundyou.jfif", "description" => '
+    ["releaseID" => "around-you", "title" => "Around You", "date" => "22-11-2024", "releaseType" => '<span en = "Single" pl = "Singiel"></span>', "imagePath" => "/assets/images/aroundyou.png", "description" => '
         <span en = "The first single of a young rock and roll band from Kraków, Poland - Marshalls of Victory. " pl = "Pierwszy singiel rock and rollowego zespołu z Krakowa - Marshalls of Victory."></span>
         ', "spotifyLink" => "#", "youtubeLink" => "#", "credits" => 
         [
@@ -20,6 +20,7 @@ $releases = [
             "<span en = 'Lyrics' pl = 'Tekst'></span>" => "Jan Krawczyk",
             "<span en = 'Produced by' pl = 'Wyprodukowane przez'></span>" => "Sebastian Ciotti",
             "<span en = 'Co-producer' pl = 'Współproducent'></span>" => "Patryk Sławiński",
+            "<span en = 'Cover artist' pl = 'Twórca okładki'></span>" => "Kira Kudinova",
         ],
         "visible" => true,
         "after-releasedate-only" => false
@@ -31,15 +32,16 @@ $releases = [
     
         ', "spotifyLink" => "#", "youtubeLink" => "#", "credits" =>
         [
-            "Guitars" => "Patryk Sławiński, Alex Nemertsalov",
-            "Vocals" => "Jan Krawczyk, Alex Nemertsalov",
-            "Bass guitar" => "Jan Krawczyk",
-            "Drums" => "Antoni Otwinowski",
+            "<span en = 'Guitars' pl = 'Gitary'></span>" => "Patryk Sławiński, Alex Nemertsalov",
+            "<span en = 'Vocals' pl = 'Wokale'></span>" => "Jan Krawczyk, Alex Nemertsalov",
+            "<span en = 'Bass guitar' pl = 'Gitara basowa'></span>" => "Jan Krawczyk",
+            "<span en = 'Drums' pl = 'Perkusja'></span>" => "Antoni Otwinowski",
             "" => "",
-            "Composer" => "Patryk Sławiński",
-            "Lyrics" => "Jan Krawczyk, Alex Nemertsalov",
-            "Produced by" => "Sebastian Ciotti",
-            "Co-producers" => "Patryk Sławiński",
+            "<span en = 'Composer' pl = 'Kompozytor'></span>" => "Patryk Sławiński",
+            "<span en = 'Lyrics' pl = 'Tekst'></span>" => "Alex Nemertsalov, Jan Krawczyk",
+            "<span en = 'Produced by' pl = 'Wyprodukowane przez'></span>" => "Sebastian Ciotti",
+            "<span en = 'Co-producer' pl = 'Współproducent'></span>" => "Patryk Sławiński",
+            "<span en = 'Cover artist' pl = 'Twórca okładki'></span>" => "Kira Kudinova",
         ],
         "visible" => true,
         "after-releasedate-only" => false
