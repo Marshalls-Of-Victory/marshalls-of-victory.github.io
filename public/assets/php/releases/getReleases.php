@@ -45,6 +45,25 @@ $releases = [
         ],
         "visible" => true,
         "after-releasedate-only" => false
+    ],
+
+    ["releaseID" => "god-save-the-king", "title" => "God Save The King", "date" => "03-02-2025", "releaseType" => '<span en = "Single" pl = "Singiel"></span>',  "imagePath" => "/assets/images/gtskcover.jpg", "description" => '
+    
+        <span en = "The third single of a young rock and roll band from Kraków, Poland - Marshalls of Victory. " pl = "Trzeci singiel rock and rollowego zespołu z Krakowa - Marshalls of Victory."></span>
+    
+        ', "spotifyLink" => "#", "youtubeLink" => "#", "credits" =>
+        [
+            "<span en = 'Guitars' pl = 'Gitary'></span>" => "Patryk Sławiński, Alex Nemertsalov",
+            "<span en = 'Vocals' pl = 'Wokale'></span>" => "Jan Krawczyk, Alex Nemertsalov",
+            "<span en = 'Bass guitar' pl = 'Gitara basowa'></span>" => "Jan Krawczyk",
+            "<span en = 'Drums' pl = 'Perkusja'></span>" => "Antoni Otwinowski",
+            "" => "",
+            "<span en = 'Composer' pl = 'Kompozytor'></span>" => "Patryk Sławiński",
+            "<span en = 'Lyrics' pl = 'Tekst'></span>" => "Alex Nemertsalov",
+            "<span en = 'Cover artist' pl = 'Twórca okładki'></span>" => "Jan Krawczyk",
+        ],
+        "visible" => true,
+        "after-releasedate-only" => false
     ]
 
     

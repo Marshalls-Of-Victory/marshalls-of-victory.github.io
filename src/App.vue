@@ -1,5 +1,6 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
+import LinkVisitCounter from '@/components/LinkVisitCounter.vue'
 
 import Translator from './components/Translator.vue'
 import './assets/flag-icons-master/flag-icons.min.css'
@@ -18,8 +19,10 @@ import './assets/flag-icons-master/flag-icons.min.css'
       </nav>
     </div>
   </header> -->
+  
   <Translator />
   <RouterView />
+  <LinkVisitCounter />
   <!-- <link rel="stylesheet" href="assets/flag-icons-master/flag-icons.min.css"> -->
 
 
