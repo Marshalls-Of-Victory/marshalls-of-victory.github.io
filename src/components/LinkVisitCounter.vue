@@ -5,17 +5,13 @@
 </script>
 
 <template>
-    <span v-if = "goodtogo">
-        <PHPVisitNotifier :code = "code"/>
-    </span>
+    <PHPVisitNotifier ref = "notifier"/>
 </template>
 
 <script>
     export default {
         data() {
             return {
-                goodtogo: false,
-                code: ""
             }
         },
 
@@ -31,8 +27,12 @@
                     console.warn(window.location.toString() + " ")
                     console.warn("CODE: " + code);
                     this.code = code
-                    this.goodtogo = true
+                    // this.$refs.notifier.go()
+                    alert("gone")
+                    EventHandler.emit("notifierGo", code)
                     
+                } else {
+                    // alert("code: undefined")
                 }
             });
 
