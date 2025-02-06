@@ -12,12 +12,31 @@
     export default {
         data() {
             return {
+                ip: ""
             }
         },
 
+        methods: {
+            setIP() {
+
+                return new Promise((resolve) => {
+                    fetch('https://api.ipify.org?format=json')
+                    .then(x => x.json())
+                    .then(({ ip }) => {
+                        this.term = ip;
+                        this.ip = ip;
+                        resolve()
+                    });
+                });
+
+
+            }
+        },
         mounted() {
-            EventHandler.on('routeChanged', () => {
-                
+
+
+            EventHandler.on('routeChanged', async () => {
+                await this.setIP()
                 let code = LinkGetManager.getParameter("code");
                 if (code != undefined) {
                     let loc = window.location.toString();
@@ -28,8 +47,8 @@
                     console.warn("CODE: " + code);
                     this.code = code
                     // this.$refs.notifier.go()
-                    alert("gone")
-                    EventHandler.emit("notifierGo", code)
+                    // alert("gone: " + this.ip)
+                    EventHandler.emit("notifierGo", {code: code, ip: this.ip})
                     
                 } else {
                     // alert("code: undefined")

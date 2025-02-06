@@ -1,0 +1,6 @@
+gtsk1;God Save The King - klasa 3PR
+gtsk2;God Save The King - Team Sport
+gtsk3;God Save The King - Klasa robotnicza
+gtsk4;God Save The King - Ekipa z siemachy
+gtsk5;God Save The King - Inni znajomi patryka
+gtsk0;God Save The King - Test

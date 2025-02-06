@@ -60,7 +60,6 @@ $releases = [
             "" => "",
             "<span en = 'Composer' pl = 'Kompozytor'></span>" => "Patryk Sławiński",
             "<span en = 'Lyrics' pl = 'Tekst'></span>" => "Alex Nemertsalov",
-            "<span en = 'Produced by' pl = 'Wyprodukowane przez'></span>" => "Patryk Sławiński",
             "<span en = 'Cover artist' pl = 'Twórca okładki'></span>" => "Jan Krawczyk",
         ],
         "visible" => true,
