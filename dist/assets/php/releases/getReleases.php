@@ -64,6 +64,25 @@ $releases = [
         ],
         "visible" => true,
         "after-releasedate-only" => false
+    ],
+
+    ["releaseID" => "inside-my-soul", "title" => "Inside My Soul", "date" => "16-03-2025", "releaseType" => '<span en = "Single" pl = "Singiel"></span>',  "imagePath" => "/assets/images/imscover.jpg", "description" => '
+    
+        <span en = "The fourth single of a young rock and roll band from Kraków, Poland - Marshalls of Victory. " pl = "Czwarty singiel rock and rollowego zespołu z Krakowa - Marshalls of Victory."></span>
+    
+        ', "spotifyLink" => "#", "youtubeLink" => "#", "credits" =>
+        [
+            "<span en = 'Guitars' pl = 'Gitary'></span>" => "Patryk Sławiński, Alex Nemertsalov",
+            "<span en = 'Vocals' pl = 'Wokale'></span>" => "Jan Krawczyk",
+            "<span en = 'Bass guitar' pl = 'Gitara basowa'></span>" => "Jan Krawczyk",
+            "<span en = 'Drums' pl = 'Perkusja'></span>" => "Antoni Otwinowski",
+            "" => "",
+            "<span en = 'Composer' pl = 'Kompozytor'></span>" => "Patryk Sławiński",
+            "<span en = 'Lyrics' pl = 'Tekst'></span>" => "Alex Nemertsalov",
+            "<span en = 'Cover artist' pl = 'Twórca okładki'></span>" => "Jan Krawczyk",
+        ],
+        "visible" => true,
+        "after-releasedate-only" => false
     ]
 
     
